@@ -1,0 +1,40 @@
+{
+  "name": "maha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
+    "multiple-cucumber-html-reporter": "^3.7.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinations": true,
+    "step_definitions": "cypress/e2e/step_definitions",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enable": true,
+      "formatter": "cucumber-json-formatter"
+    },
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress-tags": "^1.2.2",
+    "faker": "^6.6.6"
+  }
+}
